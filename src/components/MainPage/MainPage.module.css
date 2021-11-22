@@ -1,0 +1,22 @@
+.loadingSpinnerContainer {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 38%;
+    left: 38%;
+    margin-top: -50px;
+}
+
+.filterContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 500px;
+}
+
+.header {
+    padding-left: 20px;
+}
+
+.mainContent {
+    max-width: 100%;
+}
