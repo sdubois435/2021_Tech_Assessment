@@ -20,8 +20,7 @@ export default function App(): JSX.Element | null {
     <QueryClientProvider client={queryClient}>
       <Router>
         <Routes>
-          <Route path="/reviews" element={<MainPage />} />
-          <Route path="/reviews/:reviewId" element={<MainPage />} />
+          <Route path="/" element={<MainPage />} />
         </Routes>
       </Router>
     </QueryClientProvider>

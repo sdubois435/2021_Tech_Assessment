@@ -46,7 +46,7 @@
 }
 
 .button {
-    background-color: rgb(151, 193, 255);
+    background-color: rgb(231, 231, 231);
     border-style: solid;
     border-radius: 10px;
     border-color: black;
@@ -57,9 +57,9 @@
 
 .button:hover {
     cursor: pointer;
-    background-color: rgb(127, 177, 252);
+    background-color: rgb(214, 214, 214);
 }
 
 .button:active {
-    background-color: rgb(100, 160, 250);
+    background-color: rgb(202, 202, 202);
 }

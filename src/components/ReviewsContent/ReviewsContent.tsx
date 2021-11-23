@@ -15,8 +15,8 @@ const ReviewsContent: React.FC<ReviewsContentProps> = ({
 }: ReviewsContentProps) => {
     return (
         <div className={styles.reviewsContainer}>
-            {reviews.map((review) => {
-                return <Review id={review.id} rating={review.rating} body={review.body} onSelect={reviewSelected}/>
+            {reviews.map((review, index) => {
+                return <Review key={index} id={review.id} rating={review.rating} body={review.body} onSelect={reviewSelected}/>
             })}
         </div>
     );

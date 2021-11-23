@@ -16,14 +16,16 @@ const CountFilter: React.FC<CountFilterProps> = ({
   return (
     <div className={styles.countFilter}>
       <label>Reviews to show</label>
-      <Dropdown
-        options={options}
-        onChange={(e) => {
-          console.log(e);
-          onChange(e.value);
-        }}
-        value={defaultOption}
-      />
+      <div data-testid={"ReviewCount.Dropdown"}>
+        <Dropdown
+          options={options}
+          onChange={(e) => {
+            console.log("changed")
+            onChange(e.value);
+          }}
+          value={defaultOption}
+        />
+      </div>
     </div>
   );
 };

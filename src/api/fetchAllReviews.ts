@@ -9,7 +9,6 @@ async function fetchAllReviews(): Promise<AllReviewsResponse> {
       },
     })
     .then((response) => {
-      console.log(response);
       return {
         reviews: response.data,
         statusCode: response.status,

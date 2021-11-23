@@ -26,7 +26,6 @@ const ReviewFilter: React.FC<ReviewFilterProps> = ({
         options={options}
         value={defaultOption}
         onChange={(e) => {
-          console.log(e);
           onChange(e.value);
         }}
         placeholder="Select a filter"

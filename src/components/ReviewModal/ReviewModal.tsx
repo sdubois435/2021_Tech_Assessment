@@ -14,7 +14,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({
   isOpen,
   onClose,
 }: ReviewModalProps) => {
-  const { data, error, isLoading } = useSingleReview(reviewId);
+  const { data, error } = useSingleReview(reviewId);
 
   return (
     <div>
@@ -27,7 +27,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({
           onClose();
         }}>
         {error && <span>there was an error getting review data </span>}
-        {data && !isLoading && (
+        {data && (
           <>
             <div>
               <h2>Review Details</h2>
@@ -36,9 +36,11 @@ const ReviewModal: React.FC<ReviewModalProps> = ({
               <span>{`Rating: ${data.review.rating}`}</span>
             </div>
             <div className={styles.author}>
-              <span>{`This review was written on ${data.review.publish_date} by ${
-                data.review.author
-              }`}</span>
+              {data.review.publish_date && (
+                <span>{`This review was written on ${
+                  data.review.publish_date.split("T")[0]
+                } by ${data.review.author}`}</span>
+              )}
             </div>
             <div className={styles.body}>
               <p>{data.review.body}</p>
@@ -49,7 +51,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({
                 onClick={() => {
                   onClose();
                 }}>
-                close
+                Close
               </button>
             </div>
           </>
