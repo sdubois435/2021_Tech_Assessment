@@ -13,18 +13,18 @@ const useData = (): {
     // Boolean to let us know the request is still in flight
     isLoading: boolean;
 } => {
-    // 
-    const { data, error, isLoading } = useQuery(
-        ["reviews"],
-        () => fetchAllReviews(),
-    )
+	// 
+	const { data, error, isLoading } = useQuery(
+		['reviews'],
+		() => fetchAllReviews(),
+	);
     
-    return {
-        data,
-        error,
-        statusCode: data?.statusCode,
-        isLoading,
-    };
+	return {
+		data,
+		error,
+		statusCode: data?.statusCode,
+		isLoading,
+	};
 };
 
 export default useData;

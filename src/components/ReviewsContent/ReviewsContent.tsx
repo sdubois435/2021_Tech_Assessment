@@ -6,10 +6,10 @@
  * The reviews provided are already filtered based on the filters the user has selected.
  */
 
-import React from "react";
-import { ReviewMeta } from "../../lib/types";
-import styles from "./ReviewsContent.module.css"
-import Review from "../Review"
+import React from 'react';
+import { ReviewMeta } from '../../lib/types';
+import styles from './ReviewsContent.module.css';
+import Review from '../Review';
 
 
 interface ReviewsContentProps {
@@ -21,17 +21,17 @@ interface ReviewsContentProps {
 }
 
 const ReviewsContent: React.FC<ReviewsContentProps> = ({
-    reviews,
-    reviewSelected
+	reviews,
+	reviewSelected
 }: ReviewsContentProps) => {
-    return (
-        <div className={styles.reviewsContainer}>
-            {reviews.map((review, index) => {
-                // Return a Review for each review that was passed in as a prop
-                return <Review key={index} id={review.id} rating={review.rating} body={review.body} onSelect={reviewSelected}/>
-            })}
-        </div>
-    );
+	return (
+		<div className={styles.reviewsContainer}>
+			{reviews.map((review, index) => {
+				// Return a Review for each review that was passed in as a prop
+				return <Review key={index} id={review.id} rating={review.rating} body={review.body} onSelect={reviewSelected}/>;
+			})}
+		</div>
+	);
 };
 
 export default ReviewsContent;

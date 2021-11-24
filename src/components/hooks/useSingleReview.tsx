@@ -13,17 +13,17 @@ const useSingleReview = (reviewId: string): {
      // Boolean to let us know the request is still in flight
      isLoading: boolean;
 } => {
-    const { data, error, isLoading } = useQuery(
-        ["reviewId", reviewId],
-        () => fetchReview(reviewId),
-    )
+	const { data, error, isLoading } = useQuery(
+		['reviewId', reviewId],
+		() => fetchReview(reviewId),
+	);
     
-    return {
-        data,
-        error,
-        statusCode: data?.statusCode,
-        isLoading,
-    };
+	return {
+		data,
+		error,
+		statusCode: data?.statusCode,
+		isLoading,
+	};
 };
 
 export default useSingleReview;

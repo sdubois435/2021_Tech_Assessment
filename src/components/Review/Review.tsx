@@ -5,8 +5,8 @@
  * Component styles are imported from the css module in this directory.
  */
 
-import React from "react";
-import styles from "./Review.module.css";
+import React from 'react';
+import styles from './Review.module.css';
 
 interface ReviewProps {
   // Id of the review being rendered
@@ -23,21 +23,21 @@ interface ReviewProps {
 }
 
 const Review: React.FC<ReviewProps> = ({
-  id,
-  rating,
-  body,
-  onSelect,
+	id,
+	rating,
+	body,
+	onSelect,
 }: ReviewProps) => {
-  const handleClick = () => {
-    onSelect(id);
-  };
+	const handleClick = () => {
+		onSelect(id);
+	};
 
-  return (
-    <div className={styles.reviewContainer} onClick={handleClick}>
-      <span className={styles.ratingContainer}>{`Rating: ${rating}`}</span>
-      <span className={styles.bodyContainer}>{body}</span>
-    </div>
-  );
+	return (
+		<div className={styles.reviewContainer} onClick={handleClick}>
+			<span className={styles.ratingContainer}>{`Rating: ${rating}`}</span>
+			<span className={styles.bodyContainer}>{body}</span>
+		</div>
+	);
 };
 
 export default Review;
