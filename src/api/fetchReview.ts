@@ -1,9 +1,9 @@
 import axios from "axios";
-import { APIKeyHeader, ReviewResponse } from "../lib/types";
+import { APIKeyHeader, ReviewMeta, ReviewResponse } from "../lib/types";
 
 async function fetchReview(reviewId: string): Promise<ReviewResponse> {
   return axios
-    .get(`https://shakespeare.podium.com/api/reviews/${reviewId}`, {
+    .get<ReviewMeta>(`https://shakespeare.podium.com/api/reviews/${reviewId}`, {
       headers: {
         "X-API-KEY": APIKeyHeader
       }

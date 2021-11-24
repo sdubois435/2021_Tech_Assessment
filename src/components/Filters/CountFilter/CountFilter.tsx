@@ -1,13 +1,18 @@
 import React from "react";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import { RETURN_ALL } from "../../../lib/types";
 import styles from "./CountFilter.module.css";
 
 interface CountFilterProps {
+  // Calls parent function so we can manage state of the main page
   onChange: (count: string) => void;
 }
 
-const options = ["10", "25", "50", "100", "all"];
+// Number of reviews to show on the page
+const options = ["10", "25", "50", "100", RETURN_ALL];
+
+// Set the defualt option to 10 reviews on the page
 const defaultOption = options[0];
 
 const CountFilter: React.FC<CountFilterProps> = ({
@@ -20,7 +25,6 @@ const CountFilter: React.FC<CountFilterProps> = ({
         <Dropdown
           options={options}
           onChange={(e) => {
-            console.log("changed")
             onChange(e.value);
           }}
           value={defaultOption}

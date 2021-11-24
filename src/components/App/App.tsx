@@ -17,6 +17,8 @@ const queryClient = new QueryClient({
 
 export default function App(): JSX.Element | null {
   return (
+    // Wrap main page in QueryClientProvider so we can use react-query.
+    // Setup route to main page when home page is hit (basepath = "/")
     <QueryClientProvider client={queryClient}>
       <Router>
         <Routes>
