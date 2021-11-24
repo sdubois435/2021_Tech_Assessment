@@ -19,6 +19,14 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run lint`
+
+Runs linting over every file under src.
+
+### `npm run lint:fix`
+
+Runs linting over every file under src and attempts to fix linting errors
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
