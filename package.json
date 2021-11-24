@@ -25,9 +25,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "npm run lint -- --fix" 
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +49,9 @@
   },
   "devDependencies": {
     "@types/react-modal": "^3.13.1",
-    "@types/react-native": "^0.66.5"
+    "@types/react-native": "^0.66.5",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint-plugin-react": "^7.27.1"
   }
 }

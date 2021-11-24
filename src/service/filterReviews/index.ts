@@ -1,1 +1,1 @@
-export { default } from "./filterReviews"
+export { default } from './filterReviews';
